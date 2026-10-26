@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siklus 2 - Portofolio | Zainudin</title>
+    
+    <!-- Tailwind CSS untuk Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome untuk Ikon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4F46E5', // Indigo 600
+                        secondary: '#06B6D4', // Cyan 500
+                        dark: '#0F172A', // Slate 900
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Memanggil file CSS eksternal -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="font-sans text-gray-700 bg-gray-50 antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigasi Khusus Halaman Artefak -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-display font-bold text-2xl text-dark tracking-tight">
+                        Zain | <span class="text-primary">E - Portofolio</span>
+                    </a>
+                </div>
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-600 hover:text-primary transition font-medium">Beranda</a>
+                    <a href="siklus1.html" class="text-gray-600 hover:text-primary transition font-medium">Siklus 2</a>
+                    <a href="siklus2.html" class="text-primary font-bold border-b-2 border-primary transition pb-1">Siklus 3</a>
+                    <a href="siklus3.html" class="text-gray-600 hover:text-primary transition font-medium">Siklus 4</a>
+                </div>
+                <!-- Tombol Menu Mobile -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="index.html" class="block px-3 py-2 text-gray-600 font-medium hover:bg-indigo-50 hover:text-primary rounded-md">Beranda</a>
+                <a href="siklus1.html" class="block px-3 py-2 text-gray-600 font-medium hover:bg-indigo-50 hover:text-primary rounded-md">Siklus 2</a>
+                <a href="siklus2.html" class="block px-3 py-2 text-primary font-bold bg-indigo-50 rounded-md">Siklus 3</a>
+                <a href="siklus3.html" class="block px-3 py-2 text-gray-600 font-medium hover:bg-indigo-50 hover:text-primary rounded-md">Siklus 4</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Halaman / Mini Hero -->
+    <section class="pt-32 pb-16 bg-white border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 fade-in-up">
+                <div>
+                    <div class="inline-block px-4 py-1.5 bg-cyan-50 text-secondary font-semibold rounded-full text-sm mb-4">
+                        <i class="fas fa-chart-bar mr-2"></i> PPL Mandiri - Siklus 3
+                    </div>
+                    <h1 class="font-display text-3xl md:text-5xl font-bold text-dark mb-4">
+                        Analisis Data: <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Visualisasi Data</span>
+                    </h1>
+                    <p class="text-gray-500 max-w-2xl text-lg">
+                        Analisis komprehensif terhadap perangkat pembelajaran berbasis model Problem-Based Learning (PBL) yang berfokus pada melatih peserta didik memilih dan membuat visualisasi data yang tepat &ndash; grafik batang, garis, lingkaran, dan pencar &ndash; mulai dari tabel angka hingga praktik membuat grafik sendiri menggunakan Excel.
+                    </p>
+                </div>
+                <div class="flex-shrink-0">
+                    <a href="#artefak" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white hover:bg-cyan-600 transition shadow-lg shadow-cyan-200">
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Artefak & Analisis -->
+    <section id="artefak" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+            <!-- ARTEFAK 1: MODUL AJAR -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden fade-in-up">
+                <div class="p-8 md:p-10 border-b border-gray-50 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+                    <div class="flex items-center gap-5">
+                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-2xl font-bold text-dark">Modul Ajar (RPP)</h2>
+                            <p class="text-gray-500">Materi Visualisasi Data: Grafik Batang, Garis, Lingkaran & Pencar (Fase D)</p>
+                        </div>
+                    </div>
+                    <button onclick="window.open('assets/siklus2/modul_ajar.pdf', '_blank')" class="bg-white border-2 border-gray-200 text-gray-700 hover:border-secondary hover:text-secondary px-6 py-2.5 rounded-full font-medium transition flex items-center whitespace-nowrap">
+                        <i class="far fa-file-pdf text-red-500 mr-2"></i> Lihat Dokumen
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                    <div class="p-8 md:p-10 bg-white">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold text-dark flex items-center mb-2"><i class="fas fa-bullseye text-blue-500 mr-2"></i> Konteks & Tujuan</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Modul ajar ini dirancang untuk kelas VIII dengan model <strong>Problem-Based Learning (PBL)</strong> dan alokasi 2 JP (2 x 25 menit). Bertujuan memandu peserta didik memilih jenis grafik yang tepat (batang, garis, lingkaran, pencar) berdasarkan karakteristik data, kemudian mempraktikkan pembuatan tabel dan visualisasinya sendiri menggunakan Microsoft Excel.
+                                </p>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
+                                    <h4 class="font-semibold text-emerald-800 text-sm mb-1">Kelebihan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Pertanyaan pemantik sangat kontekstual: membandingkan kecepatan membaca nilai Agus dalam bentuk tabel versus diagram batang, sehingga peserta didik menyadari sendiri pentingnya visualisasi data.</li>
+                                        <li>Alur PBL membangun pemahaman secara bertahap, dari studi kasus pemilihan jenis grafik hingga praktik mandiri membuat grafik di Excel.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-red-50/50 p-4 rounded-xl border border-red-100">
+                                    <h4 class="font-semibold text-red-800 text-sm mb-1">Kekurangan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Alokasi waktu 2 JP (50 menit) tergolong singkat untuk mencakup pengenalan empat jenis grafik sekaligus praktik mandiri membuat tabel dan grafik, sehingga berisiko terburu-buru bagi peserta didik yang baru mengenal Excel.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 md:p-10 bg-slate-800 text-white relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                        <h3 class="font-display font-bold text-xl mb-4 text-white relative z-10">Analisis Kajian Teori</h3>
+                        <div class="space-y-4 relative z-10">
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Modul ini disusun berdasarkan model <strong>Problem-Based Learning (PBL)</strong>, di mana peserta didik dihadapkan pada masalah otentik &ndash; kesulitan membaca data mentah dalam bentuk tabel &ndash; sehingga kebutuhan mempelajari visualisasi data muncul secara bermakna dari pengalaman mereka sendiri, bukan diajarkan secara langsung.
+                            </p>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Pemilihan aktivitas membuat grafik secara mandiri di Excel selaras dengan teori <em>Dual Coding (Allan Paivio)</em>, yang menyatakan bahwa informasi akan lebih mudah dipahami dan diingat ketika disajikan melalui dua jalur representasi sekaligus, yaitu data verbal/numerik (tabel) dan representasi visual (grafik).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ARTEFAK 2: MEDIA AJAR -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden fade-in-up delay-100">
+                <div class="p-8 md:p-10 border-b border-gray-50 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+                    <div class="flex items-center gap-5">
+                        <div class="w-16 h-16 bg-amber-50 text-amber-500 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-2xl font-bold text-dark">Media Ajar (Salindia)</h2>
+                            <p class="text-gray-500">Presentasi Visual Jenis-jenis Grafik & Studi Kasus Pemilihan Grafik</p>
+                        </div>
+                    </div>
+                    <button onclick="window.open('assets/siklus2/media_ajar.pdf', '_blank')" class="bg-white border-2 border-gray-200 text-gray-700 hover:border-amber-500 hover:text-amber-600 px-6 py-2.5 rounded-full font-medium transition flex items-center whitespace-nowrap">
+                        <i class="far fa-file-pdf text-red-500 mr-2"></i> Lihat Dokumen
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                    <div class="p-8 md:p-10 bg-white order-2 md:order-1">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold text-dark flex items-center mb-2"><i class="fas fa-bullseye text-amber-500 mr-2"></i> Konteks & Tujuan</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Media presentasi ini digunakan untuk memberikan stimulasi visual kepada peserta didik, menampilkan perbandingan data nilai Agus dalam bentuk tabel dan diagram batang, penjelasan empat jenis grafik (Batang, Garis, Lingkaran, Pencar) beserta fungsi dan contohnya, hingga tiga studi kasus nyata (suhu ruangan laboratorium IPA, hasil pemilihan ketua OSIS, dan tinggi badan siswa) agar peserta didik memahami kapan setiap jenis grafik digunakan.
+                                </p>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
+                                    <h4 class="font-semibold text-emerald-800 text-sm mb-1">Kelebihan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Studi kasus disusun dari konteks sekolah yang dekat dengan keseharian peserta didik (suhu lab IPA, hasil Pilketos, tinggi badan teman sekelas), sehingga mudah dipahami.</li>
+                                        <li>Dilengkapi "formula cepat" memilih jenis grafik dan daftar kesalahan umum yang perlu dihindari, misalnya Pie Chart untuk kategori yang terlalu banyak.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-red-50/50 p-4 rounded-xl border border-red-100">
+                                    <h4 class="font-semibold text-red-800 text-sm mb-1">Kekurangan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Slide belum menampilkan langkah teknis pembuatan grafik pada Excel secara rinci, sehingga guru perlu mendemonstrasikan langsung fitur Insert Chart saat sesi praktik.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-8 md:p-10 bg-amber-50 border-b md:border-b-0 md:border-l border-amber-100 order-1 md:order-2 relative overflow-hidden">
+                        <div class="absolute bottom-0 left-0 w-full h-1 bg-amber-200"></div>
+                        <h3 class="font-display font-bold text-xl mb-4 text-amber-900">Analisis Kajian Teori</h3>
+                        <div class="space-y-4">
+                            <p class="text-amber-800/80 text-sm leading-relaxed">
+                                Penyusunan media visual ini didasarkan pada <strong>Teori Kognitif Pembelajaran Multimedia (Richard Mayer)</strong>, khususnya <em>Signaling Principle</em> (Prinsip Sinyal) yang menyoroti unsur-unsur penting seperti judul grafik, label sumbu, dan formula cepat pemilihan grafik agar perhatian peserta didik terarah pada konsep esensial.
+                            </p>
+                            <p class="text-amber-800/80 text-sm leading-relaxed">
+                                Perbandingan data nilai Agus dalam dua representasi (tabel dan diagram batang) pada slide pembuka turut mendukung prinsip <em>Dual Coding</em>, membantu peserta didik membandingkan langsung efektivitas kedua bentuk penyajian data tersebut.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ARTEFAK 3: LKPD -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden fade-in-up delay-200">
+                <div class="p-8 md:p-10 border-b border-gray-50 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+                    <div class="flex items-center gap-5">
+                        <div class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-2xl font-bold text-dark">LKPD & Hasil Siswa</h2>
+                            <p class="text-gray-500">Praktik Membuat Tabel Data dan Visualisasi Grafik di Excel</p>
+                        </div>
+                    </div>
+                    <button onclick="window.open('https://docs.google.com/spreadsheets/d/1AwndBWjJ0izH6eWH5y0_Iv31Wwy2I5jJ5M7sT53MZG0/edit?usp=sharing')" class="bg-white border-2 border-gray-200 text-gray-700 hover:border-emerald-500 hover:text-emerald-600 px-6 py-2.5 rounded-full font-medium transition flex items-center whitespace-nowrap">
+                        <i class="far fa-file-pdf text-red-500 mr-2"></i> Lihat Dokumen
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                    <div class="p-8 md:p-10 bg-white">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold text-dark flex items-center mb-2"><i class="fas fa-bullseye text-emerald-500 mr-2"></i> Konteks & Tujuan</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    LKPD terbagi menjadi dua kegiatan: menentukan jenis grafik paling tepat untuk tiga studi kasus (suhu ruangan laboratorium, hasil Pilketos, dan tinggi badan siswa), serta praktik mandiri membuat satu tabel data pilihan sendiri (misalnya nilai ulangan beberapa mata pelajaran atau data hobi teman sekelas) dan mengubahnya menjadi grafik menggunakan fitur Insert Chart pada Excel.
+                                </p>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
+                                    <h4 class="font-semibold text-emerald-800 text-sm mb-1">Kelebihan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Peserta didik bebas memilih data yang akan divisualisasikan, meningkatkan rasa kepemilikan dan motivasi terhadap hasil karya mereka sendiri.</li>
+                                        <li>Hasil grafik dapat langsung diuji dan diperbaiki saat itu juga karena dikerjakan langsung pada aplikasi Excel.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-red-50/50 p-4 rounded-xl border border-red-100">
+                                    <h4 class="font-semibold text-red-800 text-sm mb-1">Kekurangan</h4>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                        <li>Sebagian peserta didik masih kesulitan melengkapi unsur grafik (judul grafik dan label sumbu) karena belum terbiasa menggunakan fitur Insert Chart secara mandiri.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-8 md:p-10 bg-slate-50 border-t md:border-t-0 md:border-l border-gray-100">
+                        <h3 class="font-display font-bold text-xl mb-4 text-dark">Analisis Kajian Teori</h3>
+                        <div class="space-y-4">
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Aktivitas pada LKPD ini sejalan dengan <strong>Teori Konstruktivisme (Jean Piaget)</strong>, yang menekankan bahwa pemahaman tentang visualisasi data akan lebih kuat ketika peserta didik membangun sendiri representasi grafiknya, bukan sekadar mengamati contoh yang sudah jadi.
+                            </p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Kegiatan menentukan jenis grafik pada studi kasus sebelum praktik mandiri turut menerapkan prinsip <strong>Scaffolding (Jerome Bruner)</strong>, di mana pemahaman dibangun secara bertahap mulai dari analisis kasus terbimbing hingga praktik membuat grafik secara mandiri.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Bagian Dokumentasi Pelaksanaan -->
+    <section id="dokumentasi" class="py-16 bg-white border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="font-display text-3xl font-bold text-dark mb-4">Dokumentasi Pelaksanaan</h2>
+                <div class="w-16 h-1 bg-secondary mx-auto rounded-full mb-4"></div>
+            </div>
+
+            <!-- Grid Galeri Foto (Murni Tanpa Teks) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Foto 1 -->
+                <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-sm border border-gray-200 fade-in-up hover:shadow-xl transition-all duration-300 group">
+                    <div class="overflow-hidden h-64 relative">
+                        <img src="assets/siklus2/images/image1.png" alt="Dokumentasi Pelaksanaan 1" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-sm border border-gray-200 fade-in-up delay-100 hover:shadow-xl transition-all duration-300 group">
+                    <div class="overflow-hidden h-64 relative">
+                        <img src="assets/siklus2/images/image2.png" alt="Dokumentasi Pelaksanaan 2" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-sm border border-gray-200 fade-in-up delay-200 hover:shadow-xl transition-all duration-300 group">
+                    <div class="overflow-hidden h-64 relative">
+                        <img src="assets/siklus2/images/image3.png" alt="Dokumentasi Pelaksanaan 3" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </section>
+    <section id="penilaian" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-dark mb-4">Penilaian Guru Pamong</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Berisi lampiran 7 dan 8 tentang penilaian Guru Pamong.</p>
+            </div>
+            <!-- Card Lampiran Penilaian Guru Pamong -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
+                <a href="assets/penilaian/Lampiran_7_siklus3.pdf" target="_blank" class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:border-primary transition-all duration-300 p-6 flex items-center gap-5">
+                    <div class="w-14 h-14 bg-indigo-50 text-primary rounded-xl flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-primary group-hover:text-white transition">
+                        <i class="far fa-file-pdf"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-dark">Lampiran 7</h3>
+                        <p class="text-gray-500 text-sm">Lembar Penilaian Guru Pamong</p>
+                    </div>
+                    <i class="fas fa-arrow-right ml-auto text-gray-300 group-hover:text-primary transition"></i>
+                </a>
+ 
+                <a href="assets/penilaian/Lampiran_8_siklus3.pdf" target="_blank" class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:border-primary transition-all duration-300 p-6 flex items-center gap-5">
+                    <div class="w-14 h-14 bg-indigo-50 text-primary rounded-xl flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-primary group-hover:text-white transition">
+                        <i class="far fa-file-pdf"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-dark">Lampiran 8</h3>
+                        <p class="text-gray-500 text-sm">Lembar Penilaian Guru Pamong</p>
+                    </div>
+                    <i class="fas fa-arrow-right ml-auto text-gray-300 group-hover:text-primary transition"></i>
+                </a>
+            </div>
+            
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-white pt-12 pb-8 border-t border-gray-100 text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <h3 class="font-display font-bold text-xl text-dark mb-4">
+                Zain<span class="text-primary">udin.</span>
+            </h3>
+            <p class="text-gray-500 text-sm">
+                &copy; <span id="year"></span> Portofolio Zainudin. E-Portfolio PPG Prajabatan.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Memanggil Script Utama -->
+    <script src="/main.js"></script>
+    <script>
+        // Memastikan update tahun jika main.js lambat dimuat
+        if(document.getElementById('year')) {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        }
+    </script>
+</body>
+</html>
